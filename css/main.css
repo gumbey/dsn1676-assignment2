@@ -1,0 +1,107 @@
+@-moz-viewport { width: device-width; scale: 1; }
+@-ms-viewport { width: device-width; scale: 1; }
+@-o-viewport { width: device-width; scale: 1; }
+@-webkit-viewport { width: device-width; scale: 1; }
+@viewport { width: device-width; scale: 1; }
+
+html {
+  box-sizing: border-box;
+
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+
+  background-color: #000;
+
+  font: normal 100%/1.5 sans-serif;
+  color: #fff;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body{
+	text-align: center;
+}
+
+.clock-face {
+	background-image: url(../images/clock-face.svg);
+  height: 300px;
+  width: 300px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.hand-hour{
+	transition: all 6s linear;
+	transform: rotate(0deg);
+	transform-origin: bottom center;
+}
+
+.hand-minute{
+	transition: all 6s linear;
+	transform: rotate(0deg);
+	transform-origin: bottom center
+}
+
+.hand {
+  width: 14px;
+  position: absolute;
+  bottom: 50%;
+  left: 143px;
+}
+
+.center {
+  width: 28px;
+  position: absolute;
+  top: calc(50% - 14px);
+  left: calc(50% - 14px);
+}
+
+.clock-face:target .hand-hour {
+	transform: rotate(360deg);
+}
+
+.clock-face:target .hand-minute {
+	transform: rotate(4320deg)
+}
+
+.green{
+	display: inline-block;
+	background-color: green;
+	width: 7em;
+	line-height: 7em;
+	overflow: hidden;
+	border-radius: 50%;
+	margin: 1em;
+	transition: all .25s linear;
+}
+
+.red{
+	display: inline-block;
+	background-color: red;
+	width: 7em;
+	line-height: 7em;
+	overflow: hidden;
+	border-radius: 50%;
+	margin: 1em;
+	transition: all .25s linear;
+}
+
+.green:hover {
+	background-color: #fff;
+	color: black;
+}
+
+.red:hover {
+	background-color: #fff;
+	color: black;
+}
+
+a {
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+}
